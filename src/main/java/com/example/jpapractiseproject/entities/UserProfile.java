@@ -1,4 +1,7 @@
-package com.example.jpapractiseproject;
+package com.example.jpapractiseproject.entities;
+
+import com.example.jpapractiseproject.entities.Gender;
+import com.example.jpapractiseproject.entities.User;
 
 import javax.persistence.*;
 

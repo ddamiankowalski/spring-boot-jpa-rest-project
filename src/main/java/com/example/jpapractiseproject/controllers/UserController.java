@@ -1,5 +1,9 @@
-package com.example.jpapractiseproject;
+package com.example.jpapractiseproject.controllers;
 
+import com.example.jpapractiseproject.entities.UserProfile;
+import com.example.jpapractiseproject.entities.User;
+import com.example.jpapractiseproject.repositories.UserProfilesRepository;
+import com.example.jpapractiseproject.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.lang.Nullable;

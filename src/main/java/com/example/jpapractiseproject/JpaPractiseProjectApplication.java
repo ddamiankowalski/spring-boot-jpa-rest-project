@@ -1,5 +1,8 @@
 package com.example.jpapractiseproject;
 
+import com.example.jpapractiseproject.entities.Device;
+import com.example.jpapractiseproject.entities.Entry;
+import com.example.jpapractiseproject.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -33,29 +36,11 @@ class DemoCommandLineRunner implements CommandLineRunner{
 	private OfficeRepository officeRepository;
 	@Autowired
 	private DeviceRepository deviceRepository;
+	@Autowired
+	private EntriesRepository entriesRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
-//		User user = new User("Damian", "Kowalski", "damian@gmail.com");
-//		repository.save(user);
-//
-//		User secondUser = new User("Kamil", "Wieczarek", "kamil@gmail.com");
-//		repository.save(secondUser);
-//
-//		UserProfile userProfile = new UserProfile("+484921", Gender.MALE, "Poland");
-//		userProfile.setUser(user);
-//		profileRepository.save(userProfile);
-//
-//		Office office = new Office(650L, user);
-//		officeRepository.save(office);
-//		Office office1 = new Office(223L, secondUser);
-//		officeRepository.save(office1);
-//
-//		Device device1 = new Device("Samsung");
-//		Device device2 = new Device("Motorola");
-//		device1.setOffice(office);
-//		device2.setOffice(office);
-//		deviceRepository.save(device1);
-//		deviceRepository.save(device2);
+
 	}
 }
