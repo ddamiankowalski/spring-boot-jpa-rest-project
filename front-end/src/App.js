@@ -16,7 +16,7 @@ class App extends Component {
         this.setState({
             users: [
                 ...this.state.users,
-                element
+                element,
             ]
         })
     }

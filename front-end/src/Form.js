@@ -27,17 +27,14 @@ class Form extends Component {
         this.setState({emailValue: event.target.value});
     }
     
-    handleSubmit(event) {
+    async handleSubmit(event) {
+        event.preventDefault();
         //tutaj wysylamy fetcha do api
         const data = {
             firstName: this.state.firstNameValue,
             lastName: this.state.lastNameValue,
             email: this.state.emailValue
         }
-
-        this.props.onUserAdd(data);
-
-        console.log(data)
 
         const fetchOptions = {
             method: 'POST',
@@ -47,8 +44,17 @@ class Form extends Component {
             body: JSON.stringify(data)
         }
 
-        const response = fetch('http://localhost:8080/users', fetchOptions);
-        event.preventDefault();
+        const response = await fetch('http://localhost:8080/users', fetchOptions);
+        const resJson = await response.json();
+        console.log(resJson)
+
+        const propsData = {
+            firstName: resJson.firstName,
+            lastName: resJson.lastName,
+            email: resJson.email,
+            id: resJson.id
+        }
+        this.props.onUserAdd(propsData);
     }
     
       render() {

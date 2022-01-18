@@ -6,9 +6,10 @@ class Users extends Component {
         super(props);
     }
     render() {
-      const listItems = this.props.users.map((element, index) => {
+      const listItems = this.props.users.map((element) => {
         return (
-          <tr key={index}>
+          <tr key={element.id}>
+            <td>{element.id}</td>
             <td>{element.firstName}</td>
             <td>{element.lastName}</td>
             <td>{element.email}</td>
@@ -22,6 +23,7 @@ class Users extends Component {
             <table>
               <tbody>
               <tr>
+                <th>Id</th>
                 <th>Imie</th>
                 <th>Nazwisko</th>
                 <th>Email</th>
