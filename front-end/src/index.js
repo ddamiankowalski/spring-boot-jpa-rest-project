@@ -1,12 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { useEffect } from 'react';
-
-const App = () => {
-  return (
-    <div>This is a simple app for a University Project purposes</div>
-  )
-}
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
